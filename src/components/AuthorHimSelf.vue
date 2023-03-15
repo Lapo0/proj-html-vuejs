@@ -83,10 +83,12 @@
 
             .card {
                 border: 0;
+                
 
                 &:hover img {
                     transition: 0.7s;
                     transform: scale(1.05);
+                    filter: drop-shadow(5px 5px 6px rgb(94, 86, 86));
                 }
                 
                 &, img {

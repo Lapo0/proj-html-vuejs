@@ -118,6 +118,19 @@ export default {
                 .card {
                     border: 0;
 
+                    img.card-img-top {
+                        filter: blur(0);
+                        filter: contrast(100%);
+                        transition: 0.4s;
+
+                        &:hover {
+                            transition: 0.4s;
+                            filter: blur(1px);
+                            filter: contrast(70%);
+                            cursor: pointer;
+                        }
+                    }
+
                     h5{
                         font-size: 25px;
                         font-weight: 400;
@@ -147,6 +160,20 @@ export default {
     @media (max-width: 1200px) {
         .card {
             display: contents;
+
+            .card-body {
+                overflow: hidden;
+            }
+
+            img {
+                transform: scale(1);
+                transition: 0.4s;
+            }
+
+            img:hover {
+                transition: 0.4s;
+                transform: scale(1.1);
+            }
 
             .card-body {
                 padding: 10px 0;
