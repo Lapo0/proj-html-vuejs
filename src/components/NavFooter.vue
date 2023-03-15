@@ -15,7 +15,7 @@ export default {
                 'Phone: (800) 000-0000',
                 'Mobile: (800) 000-0000',
                 'Email: info@your-company.com',
-            ]
+            ],
         }
     }
 }
@@ -54,8 +54,20 @@ export default {
                 </li>
                 <li>
                     <ul class="icon">
-                        <li v-for="icon in 5">
-                            {{ icon  }}
+                        <li>
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </li>
+                        <li>
+                            <i class="fa-brands fa-twitter"></i>
+                        </li>
+                        <li>
+                            <i class="fa-brands fa-instagram"></i>
+                        </li>
+                        <li>
+                            <i class="fa-brands fa-youtube"></i>
+                        </li>
+                        <li>
+                            <i class="fa-brands fa-linkedin-in"></i>
                         </li>
                     </ul>
                 </li>

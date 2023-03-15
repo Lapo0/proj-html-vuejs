@@ -30,12 +30,37 @@
 </script>
 
 <template>
+    <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+  Link with href
+</a>
+
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div>
+      Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+    </div>
+    <div class="dropdown mt-3">
+      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+        Dropdown button
+      </button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Action</a></li>
+        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li><a class="dropdown-item" href="#">Something else here</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
     <div class="header-black bg-black text-light">
         <div class="top-header align-items-center d-sm-flex d-md-flex d-xl-none">
             <Logo />
             <div class="nav">
-                <div class="hamburger">
-                    hamburger
+                <div class="hamburger fs-1">
+                    <i class="fa-solid fa-bars"></i>
                 </div>
                 <ul class="d-none">
                     <NavHeader :class="activeLinkIndex === i ? 'active' : ''" v-for="(link, i) in links" :key="i" :link="link" @click="isActive(i)"/>
@@ -85,7 +110,7 @@
                         </div>
                         <div class="buttons">
                             <button class="col-6">
-                                <i class="fa-brands fa-apple"></i>
+                                <i class="fa-brands fa-amazon"></i>
                                 Buy On Amazon
                             </button>
                             <button class="col-6">
@@ -214,6 +239,11 @@
                             padding: 0 30px;
                             border: 2px solid $green;
                             border-radius: 6px;
+
+                            &:hover {
+                                background-color: $green;
+                                color: white;
+                            }
                         }
                     }
                 }
