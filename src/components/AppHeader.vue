@@ -43,7 +43,12 @@
             </div>
         </div>
     </div>
+
     <header class="text-light">
+        <div class="bg-background">
+            <div class="opacity"></div>
+            <img src="src/image/hero-07-2x.jpg" alt="">
+        </div>
         <div class="top-header d-sm-none d-md-none d-xl-flex">
             <Logo />
             <div class="nav">
@@ -111,7 +116,27 @@
         width: 125px;
     }
 
-    .top-header {
+    header {
+        height: 100vh;
+        position: relative;
+
+        .bg-background img{
+            object-fit: cover;
+            height: 100vh;
+            object-position: center;
+            position: absolute;
+            z-index: -999;
+        }
+
+        .bg-background .opacity {
+            position: absolute;
+            height: 100vh;
+            width: 100%;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,1));
+            z-index: -998;
+        }
+
+        .top-header {
             display: flex;
             justify-content: space-between;
             max-width: 1700px;
@@ -152,20 +177,12 @@
             }
         }
 
-    header {
-        background-image: url(src/image/hero-07-2x.jpg);
-        background-size: cover;
-        background-position: center;
-        height: 100vh;
-
-        
-
         .bottom-header {
             height: 90vh;
 
             h2 {
                 font-family: $family-georgia;
-                font-weight: 400;
+                font-weight: 900;
                 font-size: 90px;
                 color: $yellow;
             }
@@ -183,7 +200,7 @@
             }
 
             .amazon-coockie {
-                max-width: 688px;
+                max-width: 700px;
                 background-color: white;
                 align-self: flex-end;
 
