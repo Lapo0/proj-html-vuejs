@@ -172,7 +172,7 @@ export default {
 
             img:hover {
                 transition: 0.4s;
-                transform: scale(1.1);
+                transform: scale(1.025);
             }
 
             .card-body {
