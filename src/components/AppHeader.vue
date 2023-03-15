@@ -9,7 +9,7 @@
         data() {
             return {
                 store,
-                activeLinkIndex: '',
+                activeLinkIndex: 0,
             }
         },
         computed: {
@@ -54,6 +54,11 @@
             <div class="nav">
                 <ul>
                     <NavHeader :class="activeLinkIndex === i ? 'active' : ''" v-for="(link, i) in links" :key="i" :link="link" @click="isActive(i)"/>
+                    <li>
+                        <a href="#">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -72,32 +77,41 @@
                 </div>
                 <div class="col-md-12 col-xl-6 amazon-coockie">
                     <div class="block">
-                        <div class="up">
-                            <div class="image col-6">
-                                <img src="/src/image/book-widget.png" alt="">
-                            </div>
-                            <div class="text col-6">
-                                <h5 class="text-black">
-                                    Latest Book Release
-                                </h5>
-                                <p class="yellow">
-                                    D. VAUGHN AUTOBIOGRAPHY
-                                </p>
-                                <p class="text">
-                                    Donec fringilla nunc eu turpis dignissim, at euismod sapien tincidunt. Maecenas eleifend congue cursus.
-                                </p>
+                        <div class="container-fluid">
+                            <div class="up">
+                                <div class="image col-6">
+                                    <img src="/src/image/book-widget.png" alt="">
+                                </div>
+                                <div class="text col-6">
+                                    <h5 class="text-black">
+                                        Latest Book Release
+                                    </h5>
+                                    <p class="yellow">
+                                        D. VAUGHN AUTOBIOGRAPHY
+                                    </p>
+                                    <p class="text">
+                                        Donec fringilla nunc eu turpis dignissim, at euismod sapien tincidunt. Maecenas eleifend congue cursus.
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                        <div class="buttons">
-                            <button class="col-6">
-                                <i class="fa-brands fa-amazon"></i>
-                                Buy On Amazon
-                            </button>
-                            <button class="col-6">
-                                <i class="fa-brands fa-apple"></i>
-                                Buy On AppStore
-                            </button>
+                        <div class="container-fluid">
+                            <div class="buttons">
+                                <div class="col-6">
+                                    <button>
+                                        <i class="fa-brands fa-amazon"></i>
+                                        Buy On Amazon
+                                    </button>
+                                </div>
+                                <div class="col-6">
+                                    <button>
+                                        <i class="fa-brands fa-apple"></i>
+                                        Buy On AppStore
+                                    </button>
+                                </div>
+                            </div>
                         </div>
+                        
                     </div>
                 </div>
             </div>
@@ -139,8 +153,8 @@
         .top-header {
             display: flex;
             justify-content: space-between;
-            max-width: 1700px;
-            padding: 0 50px;
+            padding: 0 120px;
+            height: 10vh;
 
             .nav ul{
                 display: flex;
@@ -182,7 +196,6 @@
 
             h2 {
                 font-family: $family-georgia;
-                font-weight: 900;
                 font-size: 90px;
                 color: $yellow;
             }
@@ -190,6 +203,7 @@
             blockquote {
                 font-size: 48px;
                 font-family: $family-playfair;
+                font-weight: 600;
 
                 p {
                     font-family: $family-monterrat;
@@ -226,11 +240,17 @@
                             color: rgba(#000000,  0.7);
                         }
 
+                        .col-6 {
+                            padding-right: calc(var(--bs-gutter-x) * 0.5);
+                            padding-left: calc(var(--bs-gutter-x) * 0.5);
+                        }
+
                         button {
                             line-height: 40px;
                             padding: 0 30px;
                             border: 2px solid $green;
                             border-radius: 6px;
+                            width: 100%;
 
                             &:hover {
                                 background-color: $green;
