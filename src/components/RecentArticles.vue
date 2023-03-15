@@ -32,7 +32,7 @@ export default {
                         TESTIMONIALS FROM AROUND THE WORLD
                     </p>
                 </div>
-                <div class="col-xl-auto col-md-12 col-sm-12">
+                <div class="col-xl-auto col-md-12 col-sm-12 d-flex flex-column justify-content-center">
                     <button>
                         All Articles
                     </button>
@@ -93,6 +93,11 @@ export default {
 
             .row {
                 justify-content: space-between;
+
+                & > * {
+                    padding-right: 3rem !important;
+                    padding-left: 3rem !important;
+                }
 
                 h2 {
                     font-family: $family-playfair;

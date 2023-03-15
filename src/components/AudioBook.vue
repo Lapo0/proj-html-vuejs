@@ -38,7 +38,7 @@ export default {
         <div class="container-sm">
             <div class="row text-light">
                 <div class="image-phone mt-md-0 mt-sm-5 col-xl-5 col-md-12 order-xl-first order-md-last order-sm-last">
-                    <img src="/src/image/audible-app-2x-600x628.png" alt="">
+                    <img src="/src/image/audible-app-2x-800x837.png" alt="">
                 </div>
                 <div class="text col-xl-5 col-md-12">
                     <h3>
@@ -50,11 +50,15 @@ export default {
                     <p class="subtitle">
                         Donec fringilla nunc eu turpis dignissim, at euismod sapien tincidunt. Maecenas eleifend congue cursus.
                     </p>
-                    <ul class="color-images p-0">
+                    <ul class="color-images p-0 d-xl-flex d-md-none d-sm-none">
                         <li v-for="image in colorImages">
                             <img :src="image" alt="">
                         </li>
                     </ul>
+                    <button class="w-25 text-light d-xl-none d-md-block d-sm-block">
+                        <i class="fa-brands fa-audible"></i>
+                        Buy This On Audible
+                    </button>
                 </div>
             </div>
         </div>
@@ -90,16 +94,16 @@ export default {
     .row {
         align-items: center;
         text-align: center;
-        justify-content: center;
+        justify-content: space-between;
 
         .image-phone {
-            max-width: 466px;
+            min-width: 500px;
         }
 
         .text {
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            align-items: center;
 
             h3, .yellow {
                 font-family: $family-playfair;
@@ -124,18 +128,41 @@ export default {
                 gap: 20px;
                 justify-content: center;
             }
+
+            button {
+                line-height: 42px;
+                min-width: 220px;
+                border: 0;
+                background-color: $green;
+                border-radius: 5px;
+                margin: 30px 0;
+                transition: 0.2s;
+
+                i {
+                    padding-right: 5px;
+                }
+
+                &:hover {
+                    background-color: $dark-green;
+                    transition: 0.2s;
+                }
+            }
         }
     }
 }
 
 @media (max-width: 1200px) {
     .text {
-        padding: 0 100px;
+        padding: 0 20%;
         margin-bottom: 20px;
     }
 
-    img{
-        width: 75%;
+    .row {
+        justify-content: center !important;
+    }
+
+    .image-phone{
+        width: 35%;
     }
 }
 

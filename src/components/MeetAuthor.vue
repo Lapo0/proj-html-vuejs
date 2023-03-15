@@ -38,7 +38,6 @@
         .row {
             flex-direction: column;
             align-items: center;
-            padding: 0 12%;
 
             h2 {
                 font-family: $family-georgia;

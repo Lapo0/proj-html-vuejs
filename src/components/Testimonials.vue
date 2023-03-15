@@ -37,7 +37,7 @@ export default {
                         TESTIMONIALS FROM AROUND THE WORLD
                     </p>
                 </div>
-                <div class="col-xl-auto col-md-12 col-sm-12">
+                <div class="col-xl-auto col-md-12 col-sm-12 d-flex flex-column justify-content-center">
                     <button>
                         Read All Testimonials
                     </button>
@@ -46,7 +46,7 @@ export default {
             <div class="row">
                 <div class="col-xl-7 col-md-12 col-sm-12 best-author">
                     <div class="card text-light">
-                        <img src="/src/image/testimonial2-2x.jpg" alt="">
+                        <img src="/src/image/testimonial2-2x.jpg" class="big-image" alt="">
                         <div class="card-img-overlay">
                             <div class=" text-light">
                                 <h2>
@@ -114,6 +114,11 @@ export default {
         .row {
             justify-content: space-between;
 
+            & > * {
+                padding-right: 3rem !important;
+                padding-left: 3rem !important;
+            }
+
             h3 {
                 font-size: 40px;
                 margin-bottom: 25px;
@@ -148,21 +153,25 @@ export default {
             .card {
                 border: 0;
                 height: 100%;
+                position: relative;
 
-                &:hover img {
+                &:hover img.big-image {
                     transform: scale(1.025);
                     filter: drop-shadow(5px 5px 6px rgb(33, 20, 20));
                     transition: 0.5s;
+                    filter: grayscale(30%)
                 }
             }
 
-            img {
+            img.big-image {
                 border-radius: 0 0 90px 0;
                 transform: scale(1);
                 transition: 0.5s;
                 height: 100%;
                 object-fit: cover;
+                filter: grayscale(30%)
             }
+
             .card-img-overlay{
                 padding: 110px 95px;
 

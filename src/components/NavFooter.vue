@@ -90,9 +90,11 @@ export default {
     section {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 110px;
+        column-gap: 10%;
+        row-gap: 4%;
         max-width: 1250px;
-        margin: 0 auto;
+        margin-left: 30px;
+        padding-right: 30px;
 
         h5 {
             font-family: $family-playfair-SC;

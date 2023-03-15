@@ -78,7 +78,11 @@
         .grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            column-gap: 50px;
+
+            & > * {
+                padding-right: 1.5rem !important;
+                padding-left: 1.5rem !important;
+            }
 
             .card {
                 border: 0;
