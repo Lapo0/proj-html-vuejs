@@ -108,7 +108,8 @@ export default {
 
     @use '/src/style/partials/_variables.scss' as *;
     .container {
-        padding: 70px;
+        padding-top: 70px;
+        padding-bottom: 70px;
 
         .row {
             justify-content: space-between;
@@ -136,6 +137,10 @@ export default {
                 align-self: flex-end;
                 border-radius: 5px;
                 color: white;
+
+                &:hover {
+                    background-color: $dark-yellow;
+                }
             }
         }
 

@@ -35,7 +35,7 @@
                 FIND OUT MORE ABOUT THE AUTHOR HIMSELF
             </p>
             <div class="grid">
-                <div v-for="card in cards" class="card text-bg-dark">
+                <div v-for="card in cards" class="card">
                     <img :src="card.image" alt="">
                     <div class="card-img-overlay">
                         <div class="text">
@@ -60,7 +60,8 @@
     @use '/src/style/partials/_variables.scss' as *;
 
     .container {
-        padding: 80px 0 60px 0;
+        padding-top: 80px;
+        padding-bottom: 60px;
 
         h2 {
             font-family: $family-playfair;
@@ -79,10 +80,11 @@
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             column-gap: 50px;
-            padding: 0 12%;
 
             .card {
                 border: 0;
+                padding-right: calc(var(--bs-gutter-x) * 0.5);
+                padding-left: calc(var(--bs-gutter-x) * 0.5);
                 
 
                 &:hover img {

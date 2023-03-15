@@ -88,7 +88,8 @@ export default {
         background-color: $rose;
 
         .container {
-            padding: 120px 12%;
+            padding-top: 120px;
+            padding-bottom: 100px;
 
             .row {
                 justify-content: space-between;
@@ -113,6 +114,10 @@ export default {
                     align-self: flex-end;
                     border-radius: 5px;
                     color: white;
+
+                    &:hover{
+                        background-color: $dark-yellow;
+                    }
                 }
 
                 .card {

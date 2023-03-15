@@ -52,7 +52,7 @@
                 </ul>
             </div>
         </div>
-        <div class="bottom-header px-md-5 px-xl-0 ps-xl-5">
+        <div class="bottom-header container-fluid">
             <div class="row h-100 justify-content-xl-end justify-content-md-center justify-content-sm-center">
                 <div class="col-md-12 col-xl-6 align-self-center px-sm-5">
                     <h2>

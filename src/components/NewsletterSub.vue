@@ -72,6 +72,10 @@
                 .btn {
                     background-color: $green;
                     width: 100%;
+
+                    &:hover{
+                        background-color: $dark-green;
+                    }
                 }
 
                 p.info {

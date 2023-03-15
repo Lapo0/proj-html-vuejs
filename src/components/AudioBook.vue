@@ -133,6 +133,10 @@ export default {
         padding: 0 100px;
         margin-bottom: 20px;
     }
+
+    img{
+        width: 75%;
+    }
 }
 
 </style>

@@ -40,7 +40,10 @@ export default {
             </h5>
             <ul>
                 <li v-for="link in links">
-                    icon {{ link }}
+                    <i class="fa-solid fa-angle-right pe-2"></i>
+                    <span class="link">
+                        {{ link }}
+                    </span>
                 </li>
             </ul>
         </div>
@@ -50,7 +53,10 @@ export default {
             </h5>
             <ul>
                 <li v-for="contact in contactInfo">
-                    {{ contact }}
+                    <span class="contact">
+                        {{ contact }}
+                    </span>
+                    
                 </li>
                 <li>
                     <ul class="icon">
@@ -106,7 +112,18 @@ export default {
 
             & > * {
                 line-height: 40px;
-                color: rgba($color: #ffffff, $alpha: 0.7);
+                color: rgba($color: #ffffff, $alpha: 0.6);
+
+                .link {
+                    font-weight: 300;
+                }
+
+                &:hover .link{
+                    color: $yellow;
+                    cursor: pointer;
+                }
+
+                
             }
         }
 
